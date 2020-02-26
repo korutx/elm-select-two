@@ -11,7 +11,7 @@ module SelectTwo.Types exposing (SelectTwoConfig, SelectTwoMsg(..), Model, Selec
 
 import Browser.Dom as Dom
 import Html exposing (Html)
-import Http
+-- import Http
 
 
 {-| Command Messages for SelectTwo
