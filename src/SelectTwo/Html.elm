@@ -18,7 +18,7 @@ module SelectTwo.Html exposing
 -}
 
 import Html exposing (Attribute, Html, b, div, input, li, node, span, strong, text, ul)
-import Html.Attributes exposing (attribute, class, classList, href, id, rel, style)
+import Html.Attributes exposing (attribute, class, classList, href, id, rel, style, autocomplete)
 import Html.Events exposing (onClick, onInput)
 import Json.Decode as JD
 import List.Extra
@@ -232,7 +232,8 @@ select2DropdownDraw sender { id_, defaults, list, showSearch, x, y, width, ajax,
             [ if showSearch == True then
                 span [ class "select2-search select2-search--dropdown" ]
                     [ input
-                        [ class "select2-search__field"
+                        [ class "csf form-control input-sm"
+                        , autocomplete False
                         , id (id_ ++ "--search")
                         , onInput (SetSelectTwoSearch >> sender)
                         , Html.Events.custom "click" <| preventAndStop (sender STNull)

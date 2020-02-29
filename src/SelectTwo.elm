@@ -216,9 +216,8 @@ updateDropdown elem model =
                         let
                             dropdown =
                                 st.dropdown
-
-                            newDropdown =
-                                { dropdown | x = elem.element.x, y = elem.element.y + elem.element.height, width = elem.element.width }
+                            newDropdown = 
+                                { dropdown | {-x = elem.element.x, -} y = 30.8, width = elem.element.width }
                         in
                         { st | dropdown = newDropdown }
                     )
