@@ -223,6 +223,7 @@ select2DropdownDraw sender { id_, defaults, list, showSearch, x, y, width, ajax,
     in
     span
         [ class "elm-select2 select2-container select2-container--default select2-container--open"
+        , id <| id_ ++ "-dropdown"
         , style "position" "absolute"
         , style "left" (px x)
         , style "top" (px y)

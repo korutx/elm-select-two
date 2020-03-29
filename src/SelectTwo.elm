@@ -2,6 +2,7 @@ module SelectTwo exposing
     ( update, new, map, setSearch
     , setLoading, setList
     , basicSelectOptions, basicGroupSelectOptions, defaultsFromList, send
+    , selectOption
     )
 
 {-| This library is the basic controls for your model's select2 object and some helper methods
@@ -217,7 +218,7 @@ updateDropdown elem model =
                             dropdown =
                                 st.dropdown
                             newDropdown = 
-                                { dropdown | {-x = elem.element.x, -} y = 30.8, width = elem.element.width }
+                                { dropdown | {-x = elem.element.x, -} y = 49, width = elem.element.width }
                         in
                         { st | dropdown = newDropdown }
                     )
